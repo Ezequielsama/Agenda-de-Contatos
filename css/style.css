@@ -1,98 +1,122 @@
 *{
-    margin: 0;
     padding: 0;
-    box-sizing: 0;
-    font-family: "Roboto", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body{
-    background-color: #334155;
-    padding: 100px;
-}
-
-.containe{
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: hsla(215, 28%, 17%, 0.486);
-    color: #94a3b8;
-}
-header{
-    align-items: center;
+    width: 70%;
+    min-height: 50vh;
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
+#conteiner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
-img{
-    margin-right: 15px;
-    height: 40px;
-    padding: 5px;
+#cabecalho{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    & img{
+        position: relative;
+        height: 55px;
+        margin-right: 5px;
+        top: -13px;
+    }
+    & h1{
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 23px;
+    }
 }
 
 #formContatos{
     position: relative;
-    margin-top: 10px;
-    margin-left: 10px;
-
-    & input{
-        padding: 4px;
-        font-size: 17px;
-        border: none;
-        border-bottom: 2px solid #000;
-        background-color: #52525b;
-        color: #000000;
-    }
-
-    & input::placeholder{
-        color: #fff;
-    }
+    font-family: "Arial";
+    display: flex;
 
     & button{
-        background-color: #009432;
-        color: #fff;
-        font-size: 17px;
-        font-weight: bold;
-        border: none;
+        position: relative;
+        background-color: #00000000;
+        border: 0;
         cursor: pointer;
-        padding: 8px;
+    }
+    & button img{
+        position: relative;
+        height: 45px;
+        left: 15px;
     }
 }
 
-
-table{
-    width: 100%;
-
-    &  th{
-        border-bottom: 2px solid #000;
-        padding: 16px;
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    & td{
-        padding: 16px 0;
-        text-align: center;
-        font-size: 18px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-}
-
-#alertar{
-    position: relative;
-    top: -100px;
-    max-width: 900px;
-    width: 100%;
+input{
+    width: 326px;
+    margin: 3px 0;
     padding: 15px;
-    margin: 0 auto;
-    background-color: #dc2626ea;
-    color: #ffffff;
-    z-index: 1;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding-bottom: 0;
+    color: #969696;
+    cursor: text;
+    border: 0;
+    border-bottom: 2px solid #4e4d4d;
+    outline: 0;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-#alertar:focus{
-    display: none;
+#NomeCompleto{
+    margin-right: 30px;
+}
+
+input:focus, input:valid{
+    border-bottom: 2px solid #4d89fa;
+}
+
+
+input::placeholder{
+    color: #4e4d4d;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    text-transform: capitalize;
+}
+
+input:focus::placeholder{
+    color: #4d89fa;
+    transition: 0.5 ease-in;
+}
+
+.ListaContado{
+    margin-top: 45px;
+    margin-right: 5px;
+    display: block;
+}
+.ListaContado h2{
+    margin-bottom: 25px;
+}
+.ListaContado ul li{
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+li{
+    transition: 0.5s ease-in-out;
+    list-style: none;
+}
+
+#list li:hover{
+    position: relative;
+    transform: translate(24px);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    color: #969696;
 }
